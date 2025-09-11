@@ -1,3 +1,5 @@
+// src/components/ProductCard.tsx
+
 "use client";
 import Image from "next/image";
 import { useState } from "react";
@@ -10,6 +12,8 @@ interface ProductCardProps {
   oldPrice?: string;
   image: string;
   discount?: string;
+  // Adicione a prop para a função do carrinho
+  onAddToCart: (product: any) => void;
 }
 
 export default function ProductCard({
@@ -19,6 +23,7 @@ export default function ProductCard({
   oldPrice,
   image,
   discount,
+  onAddToCart, // Receba a função como prop
 }: ProductCardProps) {
   const [open, setOpen] = useState(false);
 
@@ -26,7 +31,6 @@ export default function ProductCard({
     <>
       <div
         className="border rounded-lg shadow hover:shadow-lg transition cursor-pointer bg-white"
-        onClick={() => setOpen(true)}
       >
         <Image
           src={image}
@@ -34,8 +38,9 @@ export default function ProductCard({
           width={100}
           height={100}
           className="mx-auto p-4"
+          onClick={() => setOpen(true)} // Mantenha o clique para abrir o modal
         />
-        <div className="p-4">
+        <div className="p-4" onClick={() => setOpen(true)}>
           {discount && (
             <span className="bg-red-600 text-white text-xs px-2 py-1 rounded">
               {discount}
@@ -49,6 +54,21 @@ export default function ProductCard({
           )}
           <p className="text-lg font-bold text-green-700">{price}</p>
         </div>
+
+        {/* Adicione o botão "Adicionar ao carrinho" aqui */}
+        <button
+          className="w-full bg-green-600 text-white py-2 rounded-b-lg hover:bg-green-700 transition"
+          onClick={() =>
+            onAddToCart({
+              id,
+              title,
+              price,
+              image,
+            })
+          }
+        >
+          Adicionar ao carrinho 🛒
+        </button>
       </div>
 
       {/* Modal */}
