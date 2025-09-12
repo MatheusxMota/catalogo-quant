@@ -3,7 +3,7 @@ import Image from "next/image";
 interface ProductModalProps {
   id: number;
   title: string;
-  price: string;
+  price: number;
   oldPrice?: string;
   image: string;
   discount?: string;

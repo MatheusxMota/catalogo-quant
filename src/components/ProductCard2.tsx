@@ -8,14 +8,14 @@ import ProductModal from "./ProductModal";
 interface ProductCardProps2 {
   id: number;
   title: string;
-  price: string;
+  price: number;
   oldPrice?: string;
   image: string;
   discount?: string;
   onAddToCart: (product: {
     id: number;
     title: string;
-    price: string;
+    price: number;
     image: string;
   }) => void;
 }

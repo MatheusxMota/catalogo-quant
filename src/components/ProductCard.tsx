@@ -4,12 +4,12 @@
 import Image from "next/image";
 import { useState } from "react";
 import ProductModal from "./ProductModal";
-import { Product } from "@/app/page";
+import { Product } from "@/types";
 
 interface ProductCardProps {
   id: number;
   title: string;
-  price: string;
+  price: number;
   oldPrice?: string;
   image: string;
   discount?: string;
