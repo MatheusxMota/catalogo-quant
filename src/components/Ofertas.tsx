@@ -3,10 +3,11 @@
 // Remove a diretiva "use client" e a importação de useState,
 // pois este componente não gerenciará o estado diretamente.
 import ProductCard from "./ProductCard";
+import { Product } from "@/app/page"; // Importe a interface Product
 
 // Defina a interface para as props que o componente receberá.
 interface OfertasProps {
-  onAddToCart: (product: any) => void;
+  onAddToCart: (product: Product) => void;
 }
 
 const products = [
