@@ -1,7 +1,15 @@
+// src/components/Header.tsx
+
 import Image from "next/image";
 import { FaShoppingCart } from "react-icons/fa";
 
-export default function Header() {
+// Adicione a interface para as props
+interface HeaderProps {
+  cartItemCount: number;
+}
+
+// Receba a prop cartItemCount no componente
+export default function Header({ cartItemCount }: HeaderProps) {
   return (
     <div className="bg-gray-100 p-6 flex items-center justify-between">
       {/* Lado esquerdo: logo + texto */}
@@ -30,9 +38,9 @@ export default function Header() {
       <div className="w-40 flex justify-end ">
         <button className="relative mx-8 text-green-600 hover:text-green-800">
           <FaShoppingCart size={28} />
-          {/* Badge de quantidade (opcional) */}
+          {/* Badge de quantidade */}
           <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-            0
+            {cartItemCount}
           </span>
         </button>
       </div>

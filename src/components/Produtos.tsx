@@ -1,21 +1,15 @@
 // src/components/Produtos.tsx
 
-"use client"; // 👈 Torna o componente um Client Component
-
+// Remova a diretiva "use client" e as importações de estado
+// pois o estado agora é gerenciado no page.tsx.
 import ProductCard2 from "./ProductCard2";
-import { useState } from "react"; // 👈 Importa o hook useState
 
-// Defina a interface para o produto para tipagem
-interface Product {
-  id: number;
-  title: string;
-  price: string;
-  image: string;
-  oldPrice?: string;
-  discount?: string;
+// 1. Defina a interface para as props que o componente receberá.
+interface ProdutosProps {
+  onAddToCart: (product: any) => void;
 }
 
-const products2: Product[] = [
+const products2 = [
   {
     id: 7,
     title: "Tijolo Comum Vermelho 8,7x4,3x18,6cm",
@@ -110,16 +104,9 @@ const products2: Product[] = [
   },
 ];
 
-export default function Produtos() {
-  // 1. Inicialize o estado do carrinho com o tipo Product[]
-  const [cart, setCart] = useState<Product[]>([]);
 
-  // 2. Crie a função para adicionar itens ao carrinho
-  const handleAddToCart = (product: Product) => {
-    setCart((prevCart) => [...prevCart, product]);
-    console.log("Produto adicionado ao carrinho:", product);
-  };
-
+// 2. O componente agora recebe onAddToCart como uma prop
+export default function Produtos({ onAddToCart }: ProdutosProps) {
   return (
     <section className="py-12 px-6">
       <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
@@ -131,8 +118,8 @@ export default function Produtos() {
           <ProductCard2
             key={p.id}
             {...p}
-            // 3. Passe a função para o componente ProductCard2
-            onAddToCart={handleAddToCart}
+            // 3. Repasse a prop onAddToCart para o ProductCard2
+            onAddToCart={onAddToCart}
           />
         ))}
       </div>

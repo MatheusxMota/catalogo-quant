@@ -1,17 +1,12 @@
 // src/components/Ofertas.tsx
-"use client";
 
+// Remove a diretiva "use client" e a importação de useState,
+// pois este componente não gerenciará o estado diretamente.
 import ProductCard from "./ProductCard";
-import { useState } from "react";
 
-// Defina a interface para o produto
-interface Product {
-  id: number;
-  title: string;
-  price: string;
-  image: string;
-  oldPrice?: string;
-  discount?: string;
+// Defina a interface para as props que o componente receberá.
+interface OfertasProps {
+  onAddToCart: (product: any) => void;
 }
 
 const products = [
@@ -63,17 +58,8 @@ const products = [
   },
 ];
 
-export default function Ofertas() {
-  // 1. Defina o tipo do estado como um array da interface Product
-  const [cart, setCart] = useState<Product[]>([]);
-
-  // 2. Defina o tipo do parâmetro 'product' na função
-  const handleAddToCart = (product: Product) => {
-    // A lógica para adicionar ao carrinho
-    setCart((prevCart) => [...prevCart, product]);
-    console.log("Produto adicionado ao carrinho:", product);
-  };
-
+// O componente agora recebe onAddToCart como uma prop
+export default function Ofertas({ onAddToCart }: OfertasProps) {
   return (
     <section className="py-12 px-6">
       <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
@@ -85,7 +71,8 @@ export default function Ofertas() {
           <ProductCard
             key={p.id}
             {...p}
-            onAddToCart={handleAddToCart}
+            // Repassa a prop onAddToCart para o ProductCard
+            onAddToCart={onAddToCart}
           />
         ))}
       </div>
