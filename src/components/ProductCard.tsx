@@ -4,6 +4,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import ProductModal from "./ProductModal";
+import { Product } from "@/app/page";
 
 interface ProductCardProps {
   id: number;
@@ -13,7 +14,7 @@ interface ProductCardProps {
   image: string;
   discount?: string;
   // Adicione a prop para a função do carrinho
-  onAddToCart: (product: any) => void;
+  onAddToCart: (product: Product) => void;
 }
 
 export default function ProductCard({

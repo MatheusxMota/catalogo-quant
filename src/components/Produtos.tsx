@@ -2,11 +2,12 @@
 
 // Remova a diretiva "use client" e as importações de estado
 // pois o estado agora é gerenciado no page.tsx.
+import { Product } from "@/app/page";
 import ProductCard2 from "./ProductCard2";
 
 // 1. Defina a interface para as props que o componente receberá.
 interface ProdutosProps {
-  onAddToCart: (product: any) => void;
+  onAddToCart: (product: Product) => void;
 }
 
 const products2 = [

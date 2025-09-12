@@ -7,7 +7,7 @@ import Ofertas from "@/components/Ofertas";
 import Produtos from "@/components/Produtos";
 import { useState } from "react";
 
-interface Product {
+export interface Product {
   id: number;
   title: string;
   price: string;
