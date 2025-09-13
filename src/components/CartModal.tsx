@@ -110,7 +110,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
               onClick={() => setSelectedPayment("pix")}
               className={`flex-1 p-4 rounded-md font-bold transition-colors ${
                 selectedPayment === "pix"
-                  ? "bg-blue-ocean text-white"
+                  ? "bg-green-500 text-white"
                   : "bg-gray-200 text-primary-grey"
               }`}
             >
@@ -120,7 +120,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
               onClick={() => setSelectedPayment("credit")}
               className={`flex-1 p-4 rounded-md font-bold transition-colors ${
                 selectedPayment === "credit"
-                  ? "bg-blue-ocean text-white"
+                  ? "bg-green-500 text-white"
                   : "bg-gray-200 text-primary-grey"
               }`}
             >
@@ -130,7 +130,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
               onClick={() => setSelectedPayment("debit")}
               className={`flex-1 p-4 rounded-md font-bold transition-colors ${
                 selectedPayment === "debit"
-                  ? "bg-blue-ocean text-white"
+                  ? "bg-green-500 text-white"
                   : "bg-gray-200 text-primary-grey"
               }`}
             >
@@ -167,7 +167,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
             href={generateWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white bg-primary-pink font-bold text-center border rounded-md p-2 pr-8 pl-8 mt-4"
+            className="text-white bg-green-500 font-bold text-center border rounded-md p-2 pr-8 pl-8 m-4"
           >
             Finalize via WhatsApp
           </a>
