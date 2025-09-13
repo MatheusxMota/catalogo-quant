@@ -39,7 +39,7 @@ export default function Header() {
             <input
               type="text"
               placeholder="Pesquisar materiais..."
-              className="border text-center border-gray-300 rounded-l px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 w-64"
+              className="border text-center border-gray-400 rounded-l px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 w-64"
             />
             <button className="bg-green-600 text-white px-4 rounded-r hover:bg-green-700">
               Buscar
