@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import ProductModal from "./ProductModal";
+import { Product } from "@/types";
 
-// 1. Atualize a interface para incluir a prop onAddToCart
 interface ProductCardProps2 {
   id: number;
   title: string;
@@ -12,12 +12,7 @@ interface ProductCardProps2 {
   oldPrice?: string;
   image: string;
   discount?: string;
-  onAddToCart: (product: {
-    id: number;
-    title: string;
-    price: number;
-    image: string;
-  }) => void;
+  onAddToCart: (product: Product) => void;
 }
 
 export default function ProductCard2({
@@ -27,38 +22,42 @@ export default function ProductCard2({
   oldPrice,
   image,
   discount,
-  onAddToCart, // 2. Adicione a prop aqui
+  onAddToCart,
 }: ProductCardProps2) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <div className="border rounded-lg shadow hover:shadow-lg transition cursor-pointer bg-white">
-        <Image
-          src={image}
-          alt={title}
-          width={100}
-          height={100}
-          className="mx-auto p-4"
-          onClick={() => setOpen(true)}
-        />
-        <div className="p-4" onClick={() => setOpen(true)}>
-          {discount && (
-            <span className="bg-red-600 text-white text-xs px-2 py-1 rounded">
-              {discount}
-            </span>
-          )}
-          <h3 className="font-semibold text-gray-800 mt-2 line-clamp-2">
-            {title}
-          </h3>
-          {oldPrice && (
-            <p className="text-sm text-gray-400 line-through">{oldPrice}</p>
-          )}
-          <p className="text-lg font-bold text-green-700">{price}</p>
+      {/* 1. Adicione 'flex', 'flex-col' e 'justify-between' ao container principal */}
+      <div className="border rounded-lg shadow hover:shadow-lg transition cursor-pointer bg-white flex flex-col justify-between">
+        {/* Conteúdo que varia de altura */}
+        <div onClick={() => setOpen(true)}>
+          <Image
+            src={image}
+            alt={title}
+            width={100}
+            height={100}
+            className="mx-auto p-4"
+          />
+          <div className="p-4">
+            {discount && (
+              <span className="bg-red-600 text-white text-xs px-2 py-1 rounded">
+                {discount}
+              </span>
+            )}
+            <h3 className="font-semibold text-gray-800 mt-2 line-clamp-2">
+              {title}
+            </h3>
+            {oldPrice && (
+              <p className="text-sm text-gray-400 line-through">{oldPrice}</p>
+            )}
+            <p className="text-lg font-bold text-green-700">{price}</p>
+          </div>
         </div>
-        {/* Adicione o botão de Adicionar ao Carrinho */}
+
+        {/* 2. Adicione 'mt-auto' ao botão para empurrá-lo para baixo */}
         <button
-          className="w-full bg-green-600 text-white py-2 rounded-b-lg hover:bg-green-700 transition"
+          className="w-full bg-green-600 text-white py-2 rounded-b-lg hover:bg-green-700 transition mt-auto"
           onClick={() =>
             onAddToCart({
               id,
@@ -72,7 +71,6 @@ export default function ProductCard2({
         </button>
       </div>
 
-      {/* Modal */}
       {open && (
         <ProductModal
           id={id}

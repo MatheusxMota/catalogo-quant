@@ -10,6 +10,7 @@ const products: Product[] = [
     id: 1,
     title: "Tijolo Comum Vermelho 8,7x4,3x18,6cm",
     price: 1.0,
+    discount: "-11%",
     image: "/tijolo.png",
   },
   {

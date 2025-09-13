@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import Ofertas from "@/components/Ofertas";
 import Produtos from "@/components/Produtos";
 
+
+
 export default function Home() {
   return (
     <main>
@@ -15,6 +17,8 @@ export default function Home() {
         <Header />
         <Ofertas />
         <Produtos />
+        
+        
       </>
     </main>
   );
