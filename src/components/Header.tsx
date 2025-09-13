@@ -48,10 +48,10 @@ export default function Header() {
         </div>
 
         {/* Direita: ícone de carrinho */}
-        <div className="w-40 flex justify-end">
+        <div className="w-40 flex justify-end ">
           <button
             onClick={handleOpenCart}
-            className="relative mx-8 text-green-600 hover:text-green-800"
+            className="relative mx-8 text-green-600 hover:text-green-800 cursor-pointer"
           >
             <FaShoppingCart size={35} />
             <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">

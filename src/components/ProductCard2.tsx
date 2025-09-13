@@ -57,7 +57,7 @@ export default function ProductCard2({
 
         {/* 2. Adicione 'mt-auto' ao botão para empurrá-lo para baixo */}
         <button
-          className="w-full bg-green-600 text-white py-2 rounded-b-lg hover:bg-green-700 transition mt-auto"
+          className="w-full bg-green-600 text-white py-2 rounded-b-lg hover:bg-green-700 transition mt-auto cursor-pointer"
           onClick={() =>
             onAddToCart({
               id,
