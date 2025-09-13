@@ -27,7 +27,7 @@ export default function Header({ onSearch }: HeaderProps) {
 
   return (
     <>
-      <div className="bg-gray-200 p-6 flex items-center justify-between">
+      <div className="bg-white p-6 flex items-center justify-between">
         {/* Lado esquerdo: logo + texto */}
         <div className="flex items-center space-x-4">
           <Image src="/logo.png" alt="Logo" width={60} height={60} />
