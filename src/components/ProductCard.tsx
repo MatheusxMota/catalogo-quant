@@ -31,7 +31,7 @@ export default function ProductCard({
     <>
       {/* 1. Adicione 'flex', 'flex-col' e 'justify-between' ao container principal */}
       <div
-        className="border rounded-lg shadow hover:shadow-lg transition cursor-pointer bg-white flex flex-col justify-between"
+       className="shadow-lg rounded-lg hover:shadow-gray-400 hover:shadow-lg transition cursor-pointer bg-white flex flex-col justify-between"
       >
         {/* Conteúdo que varia de altura */}
         <div onClick={() => setOpen(true)}>

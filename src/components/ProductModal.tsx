@@ -49,13 +49,13 @@ export default function ProductModal({
         <p className="text-lg font-bold text-green-700">{price}</p>
 
         <a
-          href="https://api.whatsapp.com/send?phone=5521986066603&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20pelo%20cat%C3%A1logo%20online!"
-          target="_blank"
-          rel="noopener noreferrer"
-          className=" flex justify-center mt-4 w-full bg-green-600 text-white py-2 rounded text-center hover:bg-green-700"
-        >
-          Comprar pelo WhatsApp
-        </a>
+  href="https://api.whatsapp.com/send?phone=5521986066603&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20pelo%20cat%C3%A1logo%20online!"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 w-full bg-green-600 text-white py-2 rounded text-center hover:bg-green-700"
+>
+  Comprar pelo WhatsApp
+</a>
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="bg-gray-100 p-6 flex items-center justify-between">
+      <div className="bg-gray-200 p-6 flex items-center justify-between">
         {/* Lado esquerdo: logo + texto */}
         <div className="flex items-center space-x-4">
           <Image src="/logo.png" alt="Logo" width={60} height={60} />

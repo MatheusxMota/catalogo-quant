@@ -60,7 +60,7 @@ export default function Ofertas() {
   const { addItem } = useCart();
 
   return (
-    <section className="py-12 px-6">
+    <section className="bg-gray-100 py-12 px-6">
       <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
         Materiais com preços exclusivos
       </h2>
