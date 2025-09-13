@@ -67,7 +67,7 @@ export default function ProductCard2({
             })
           }
         >
-          Adicionar ao carrinho 🛒
+          Adicionar ao carrinho 
         </button>
       </div>
 

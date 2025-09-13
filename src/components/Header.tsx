@@ -27,8 +27,8 @@ export default function Header() {
       <div className="bg-gray-100 p-6 flex items-center justify-between">
         {/* Lado esquerdo: logo + texto */}
         <div className="flex items-center space-x-4">
-          <Image src="/logo.png" alt="Logo" width={40} height={40} />
-          <p className="text-lg font-bold text-green-600">
+          <Image src="/logo.png" alt="Logo" width={60} height={60} />
+          <p className="text-3xl font-bold text-green-600">
             Quant-tecnologia
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function Header() {
             onClick={handleOpenCart}
             className="relative mx-8 text-green-600 hover:text-green-800"
           >
-            <FaShoppingCart size={28} />
+            <FaShoppingCart size={35} />
             <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
               {cartCount}
             </span>

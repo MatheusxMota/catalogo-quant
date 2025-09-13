@@ -70,7 +70,7 @@ export default function ProductCard({
             })
           }
         >
-          Adicionar ao carrinho 🛒
+          Adicionar ao carrinho 
         </button>
       </div>
 
