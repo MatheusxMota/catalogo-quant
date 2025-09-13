@@ -9,6 +9,7 @@ import Produtos from "@/components/Produtos";
 
 import { Product } from "@/types";
 import { offerProducts, regularProducts } from "@/data/products";
+import Footer from "@/components/Fotter";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -47,6 +48,7 @@ export default function Home() {
         <Ofertas products={filteredOfferProducts} />
         {/* Passa a lista filtrada de produtos para o componente Produtos */}
         <Produtos products={filteredRegularProducts} />
+        <Footer />
       </>
     </main>
   );
