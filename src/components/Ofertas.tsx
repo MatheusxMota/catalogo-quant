@@ -5,7 +5,37 @@ import ProductCard from "./ProductCard";
 import { Product } from "@/types";
 import { useCart } from "./CartContext";
 
-const products: Product[] = [
+// Defina a interface para as props que o componente irá receber
+interface OfertasProps {
+  products: Product[];
+}
+
+// Atualize o componente para receber a prop 'products'
+export default function Ofertas({ products }: OfertasProps) {
+  const { addItem } = useCart();
+
+  return (
+    <section className="bg-gray-100 py-12 px-6">
+      <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+        Materiais com preços exclusivos
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {/* Renderize os produtos que foram passados como props */}
+        {products.map((p) => (
+          <ProductCard
+            key={p.id}
+            {...p}
+            onAddToCart={() => addItem(p)}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+// Exporte a lista de produtos para que possa ser usada no componente pai (page.tsx)
+export const products: Product[] = [
   {
     id: 1,
     title: "Tijolo Comum Vermelho 8,7x4,3x18,6cm",
@@ -54,27 +84,3 @@ const products: Product[] = [
     image: "/balizador.png",
   },
 ];
-
-export default function Ofertas() {
-  // Use o hook para acessar a função addItem
-  const { addItem } = useCart();
-
-  return (
-    <section className="bg-gray-100 py-12 px-6">
-      <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
-        Materiais com preços exclusivos
-      </h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {products.map((p) => (
-          <ProductCard
-            key={p.id}
-            {...p}
-            // Chama a função addItem do contexto diretamente
-            onAddToCart={() => addItem(p)}
-          />
-        ))}
-      </div>
-    </section>
-  );
-}

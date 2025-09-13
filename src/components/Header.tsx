@@ -7,11 +7,14 @@ import { useState } from "react";
 import CartModal from "./CartModal";
 import { useCart } from "./CartContext";
 
-// Remove a interface HeaderProps
-export default function Header() {
-  // Use o useCart para obter a contagem de itens diretamente do contexto
+// Defina a interface para as props que o Header irá receber
+interface HeaderProps {
+  onSearch: (term: string) => void;
+}
+
+// Receba a prop onSearch no componente
+export default function Header({ onSearch }: HeaderProps) {
   const { cartCount } = useCart();
-  // Estado para controlar a visibilidade do modal
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const handleOpenCart = () => {
@@ -40,6 +43,8 @@ export default function Header() {
               type="text"
               placeholder="Pesquisar materiais..."
               className="border text-center border-gray-400 rounded-l px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 w-64"
+              // Adicione um evento onChange para chamar a função onSearch
+              onChange={(e) => onSearch(e.target.value)}
             />
             <button className="bg-green-600 text-white px-4 rounded-r hover:bg-green-700">
               Buscar
