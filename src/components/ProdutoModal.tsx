@@ -48,7 +48,7 @@ export default function ProductModal({
         )}
         <p className="text-lg font-bold text-green-700">{price}</p>
 
-        <button className="mt-4 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
+        <button className="flex justify-center mt-4 w-full bg-green-600 text-white py-2 rounded text-center hover:bg-green-700">
           Comprar pelo WhatsApp
         </button>
       </div>
