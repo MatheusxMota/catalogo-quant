@@ -1,7 +1,7 @@
 // src/data/products.ts
 
 import { Product } from "@/types";
-
+// Ofertas
 export const offerProducts: Product[] = [
   {
     id: 1,
@@ -52,6 +52,7 @@ export const offerProducts: Product[] = [
   },
 ];
 
+// Produtos
 
 export const regularProducts: Product[] = [
   {

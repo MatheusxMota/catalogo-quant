@@ -26,11 +26,15 @@ export default function ProductCard2({
 }: ProductCardProps2) {
   const [open, setOpen] = useState(false);
 
+  // Cria um formatador de moeda para Real (BRL)
+  const formatter = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+
   return (
     <>
-      {/* 1. Adicione 'flex', 'flex-col' e 'justify-between' ao container principal */}
       <div className="shadow-lg rounded-lg hover:shadow-gray-400 hover:shadow-lg transition cursor-pointer bg-white flex flex-col justify-between">
-        {/* Conteúdo que varia de altura */}
         <div onClick={() => setOpen(true)}>
           <Image
             src={image}
@@ -49,13 +53,18 @@ export default function ProductCard2({
               {title}
             </h3>
             {oldPrice && (
-              <p className="text-sm text-gray-400 line-through">{oldPrice}</p>
+              <p className="text-sm text-gray-400 line-through">
+                {/* Converte oldPrice para número e formata */}
+                {formatter.format(Number(oldPrice))}
+              </p>
             )}
-            <p className="text-lg font-bold text-green-700">{price}</p>
+            <p className="text-lg font-bold text-green-700">
+              {/* Formata o preço principal */}
+              {formatter.format(price)}
+            </p>
           </div>
         </div>
 
-        {/* 2. Adicione 'mt-auto' ao botão para empurrá-lo para baixo */}
         <button
           className="w-full bg-green-600 text-white py-2 rounded-b-lg hover:bg-green-700 transition mt-auto cursor-pointer"
           onClick={() =>
@@ -67,7 +76,7 @@ export default function ProductCard2({
             })
           }
         >
-          Adicionar ao carrinho 
+          Adicionar ao carrinho
         </button>
       </div>
 
