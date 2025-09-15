@@ -48,7 +48,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
       .replace(
         ".",
         ","
-      )}%0A*Forma de Pagamento:* ${paymentText}%0A%0AAguardamos sua resposta!`;
+      )}%0A*Forma de Pagamento:* ${paymentText}%0A%0A`;
 
     return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
   };
@@ -105,10 +105,10 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
         <div className="mt-6 pt-4 border-t border-gray-300">
           <h3 className="text-lg font-bold text-blue-ocean mb-4">Opções de Pagamento</h3>
 
-          <div className="flex flex-col md:flex-row gap-2 mb-4">
+          <div className="flex flex-col md:flex-row gap-2 mb-4 ">
             <button
               onClick={() => setSelectedPayment("pix")}
-              className={`flex-1 p-4 rounded-md font-bold transition-colors ${
+              className={`flex-1 p-4 rounded-md font-bold cursor-pointer transition-colors ${
                 selectedPayment === "pix"
                   ? "bg-green-500 text-white"
                   : "bg-gray-200 text-primary-grey"
@@ -118,7 +118,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
             </button>
             <button
               onClick={() => setSelectedPayment("credit")}
-              className={`flex-1 p-4 rounded-md font-bold transition-colors ${
+              className={`flex-1 p-4 rounded-md font-bold cursor-pointer transition-colors ${
                 selectedPayment === "credit"
                   ? "bg-green-500 text-white"
                   : "bg-gray-200 text-primary-grey"
@@ -128,7 +128,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
             </button>
             <button
               onClick={() => setSelectedPayment("debit")}
-              className={`flex-1 p-4 rounded-md font-bold transition-colors ${
+              className={`flex-1 p-4 rounded-md font-bold cursor-pointer transition-colors ${
                 selectedPayment === "debit"
                   ? "bg-green-500 text-white"
                   : "bg-gray-200 text-primary-grey"
@@ -138,20 +138,20 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
             </button>
           </div>
 
-          <div className="bg-gray-50 rounded-md p-4 min-h-[100px] flex items-center justify-center">
+          <div className="bg-gray-50 rounded-md p-4 min-h-[100px] flex items-center  justify-center">
             {selectedPayment === "pix" && (
               <p className="text-sm text-primary-grey text-center">
-                Ao finalizar a compra, um QR Code será gerado para o pagamento via PIX.
+                Ao finalizar a compra, um atendente entrará em contato para fornecer os dados do Pix
               </p>
             )}
             {selectedPayment === "credit" && (
               <p className="text-sm text-primary-grey text-center">
-                [Adicione aqui o formulário de pagamento com cartão de crédito]
+                Parcelamento em até 3x sem juros no cartão de crédito.
               </p>
             )}
             {selectedPayment === "debit" && (
               <p className="text-sm text-primary-grey text-center">
-                [Adicione aqui o formulário de pagamento com cartão de débito]
+                Iremos gerar um link para pagamento à vista no cartão de débito.
               </p>
             )}
             {!selectedPayment && (
