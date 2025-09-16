@@ -7,7 +7,7 @@ export const offerProducts: Product[] = [
     id: 1,
     title: "Transformador 3000VA Bifásico",
     price: 380.0,
-    discount: "-11%",
+    discount: "-7%",
     image: "/transformador3000va.jpg",
   },
   {
@@ -20,7 +20,7 @@ export const offerProducts: Product[] = [
   },
   {
     id: 3,
-    title: "Painel Avant 24w de Sobrepor Quadrado",
+    title: "Painel Avant 24W de Sobrepor Quadrado",
     price: 35.9,
     oldPrice: "45.50",
     discount: "-32%",
@@ -28,19 +28,19 @@ export const offerProducts: Product[] = [
   },
   {
     id: 4,
-    title: "Mini Balizador Solar LED",
-    price: 7.9,
-    oldPrice: "11.69",
+    title: "Quadro para 24 disjuntores ForceLine de Embutir",
+    price: 59.9,
+    oldPrice: "71.50",
     discount: "-32%",
-    image: "/balizador.png",
+    image: "/quadro_24_emb.webp",
   },
   {
     id: 5,
-    title: "Mini Balizador Solar LED",
+    title: "Conjunto 1 Interruptor Simples + 1 Tomada 2P+T 10A Duale Up",
     price: 7.9,
     oldPrice:" 11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    image: "/tomadaeinterruptor10aduale.webp",
   },
   {
     id: 6,
