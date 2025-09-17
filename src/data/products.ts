@@ -44,11 +44,11 @@ export const offerProducts: Product[] = [
   },
   {
     id: 6,
-    title: "Mini Balizador Solar LED",
+    title: "Camera Dome Intelbras VHL 1120  D",
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    image: "/dome.webp",
   },
 ];
 

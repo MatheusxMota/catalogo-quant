@@ -18,6 +18,12 @@ export default function ProductModal({
   discount,
   onClose,
 }: ProductModalProps) {
+  // Cria um formatador de moeda para Real (BRL)
+  const formatter = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
@@ -44,18 +50,24 @@ export default function ProductModal({
         )}
         <h2 className="text-xl font-bold mt-2">{title}</h2>
         {oldPrice && (
-          <p className="text-sm text-gray-400 line-through">{oldPrice}</p>
+          <p className="text-sm text-gray-400 line-through">
+            {/* Converte oldPrice para número e formata */}
+            {formatter.format(Number(oldPrice))}
+          </p>
         )}
-        <p className="text-lg font-bold text-green-700">{price}</p>
+        <p className="text-lg font-bold text-green-700">
+          {/* Formata o preço principal */}
+          {formatter.format(price)}
+        </p>
 
         <a
-  href="https://api.whatsapp.com/send?phone=5521986066603&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20pelo%20cat%C3%A1logo%20online!"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex justify-center mt-4 w-full bg-green-600 text-white py-2 rounded text-center hover:bg-green-700"
->
-  Comprar pelo WhatsApp
-</a>
+          href="https://api.whatsapp.com/send?phone=5521986066603&text=Olá%2C%20gostaria%20de%20fazer%20um%20pedido%20pelo%20catálogo%20online!"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex justify-center mt-4 w-full bg-green-600 text-white py-2 rounded text-center hover:bg-green-700"
+        >
+          Comprar pelo WhatsApp
+        </a>
       </div>
     </div>
   );
