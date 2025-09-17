@@ -88,7 +88,7 @@ export const regularProducts: Product[] = [
   },
   {
     id: 11,
-    title: "Mini Balizador Solar LED",
+    title: "Proteraio Eletro Penta Watt",
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
@@ -96,7 +96,7 @@ export const regularProducts: Product[] = [
   },
   {
     id: 12,
-    title: "Mini Balizador Solar LED",
+    title: "Luminária Avant Elegance Fit 18W Bivolts",
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
@@ -104,14 +104,14 @@ export const regularProducts: Product[] = [
   },
   {
     id: 13,
-    title: "Tijolo Comum Vermelho 8,7x4,3x18,6cm",
+    title: "Roteador W5 1200G Intelbras Dualband AC1200 ",
     price: 1.0,
     discount: "-11%",
     images: ["/tijolo.png", "/tijolo-2.png"],
   },
   {
     id: 14,
-    title: "Churrasqueira Centaurus a Bafo",
+    title: "Proteraio Ar-condicionado Penta Watt",
     price: 1779.9,
     oldPrice: "2020.21",
     discount: "-11%",
@@ -119,7 +119,7 @@ export const regularProducts: Product[] = [
   },
   {
     id: 15,
-    title: "Mini Balizador Solar LED",
+    title: "Fusivel Faca Fixo NEGRINI 400A 250V",
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
@@ -127,7 +127,7 @@ export const regularProducts: Product[] = [
   },
   {
     id: 16,
-    title: "Mini Balizador Solar LED",
+    title: "Disjuntor Bipolar Steck 40A Curva C",
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
@@ -135,7 +135,7 @@ export const regularProducts: Product[] = [
   },
   {
     id: 17,
-    title: "Mini Balizador Solar LED",
+    title: "Luminária de emergência Intelbras 15 LEDs",
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
@@ -143,7 +143,7 @@ export const regularProducts: Product[] = [
   },
   {
     id: 18,
-    title: "Mini Balizador Solar LED",
+    title: "Zenit ",
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",

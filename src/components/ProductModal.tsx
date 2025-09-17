@@ -1,9 +1,12 @@
+// src/components/ProductModal.tsx
 import Image from "next/image";
 import { useState } from "react";
 import { Product } from "@/types";
+// Importe os ícones do Heroicons
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 interface ProductModalProps {
-  id: number; // Adicione esta linha
+  id: number;
   images: string[];
   title: string;
   price: number;
@@ -13,7 +16,7 @@ interface ProductModalProps {
 }
 
 export default function ProductModal({
-  id, // Adicione 'id' aqui também
+  id,
   images,
   title,
   price,
@@ -66,13 +69,15 @@ export default function ProductModal({
                 className="absolute top-1/2 left-2 transform -translate-y-1/2 text-gray-800 bg-white bg-opacity-75 p-2 rounded-full hover:bg-opacity-100"
                 onClick={handlePrevImage}
               >
-                &lt;
+                {/* Use o novo ícone */}
+                <ChevronLeftIcon className="h-6 w-6" />
               </button>
               <button
                 className="absolute top-1/2 right-2 transform -translate-y-1/2 text-gray-800 bg-white bg-opacity-75 p-2 rounded-full hover:bg-opacity-100"
                 onClick={handleNextImage}
               >
-                &gt;
+                {/* Use o novo ícone */}
+                <ChevronRightIcon className="h-6 w-6" />
               </button>
             </>
           )}
