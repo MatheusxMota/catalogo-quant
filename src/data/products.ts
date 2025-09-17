@@ -60,7 +60,7 @@ export const regularProducts: Product[] = [
     title: "Fechadura Elétrica de Sobrepor Intelbras FX 2000",
     price: 1.0,
     discount: "-11%",
-    images: ["/tijolo.png"],
+    images: ["/FX2000.webp", "/FX20001.webp"],
   },
   {
     id: 8,
@@ -68,7 +68,7 @@ export const regularProducts: Product[] = [
     price: 1779.9,
     oldPrice: "2020.21",
     discount: "-11%",
-    images: ["/churrasqueira.png", "/churrasqueira-2.png"],
+    images: ["/ts2510.webp"],
   },
   {
     id: 9,
@@ -76,7 +76,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    images: ["/balizador.png", "/balizador-2.png"],
+    images: ["/301k.jpg"],
   },
   {
     id: 10,
@@ -84,7 +84,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    images: ["/balizador.png", "/balizador-2.png"],
+    images: ["/xac2000.webp"],
   },
   {
     id: 11,
@@ -92,7 +92,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    images: ["/balizador.png", "/balizador-2.png"],
+    images: ["/proteraioeletro.jpeg"],
   },
   {
     id: 12,
@@ -100,7 +100,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    images: ["/balizador.png", "/balizador-2.png"],
+    images: ["/elegance.jpg"],
   },
   {
     id: 13,
