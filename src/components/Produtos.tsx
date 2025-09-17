@@ -38,7 +38,7 @@ export default function Produtos({ products }: ProdutosProps) {
 export const products2: Product[] = [
   {
     id: 7,
-    title: "Tijolo Comum Vermelho 8,7x4,3x18,6cm",
+    title: "Fechadura Elétrica de Sobrepor Intelbras FX 2000",
     price: 1.0,
     discount: "-11%",
     images: ["/tijolo.png"],

@@ -57,14 +57,14 @@ export const offerProducts: Product[] = [
 export const regularProducts: Product[] = [
   {
     id: 7,
-    title: "Tijolo Comum Vermelho 8,7x4,3x18,6cm",
+    title: "Fechadura Elétrica de Sobrepor Intelbras FX 2000",
     price: 1.0,
     discount: "-11%",
-    images: ["/transformador3000va.jpg", "/painel_avant_24ws.webp"],
+    images: ["/tijolo.png"],
   },
   {
     id: 8,
-    title: "Churrasqueira Centaurus a Bafo",
+    title: "Telefone sem fio Intelbras TS 2510",
     price: 1779.9,
     oldPrice: "2020.21",
     discount: "-11%",
@@ -72,7 +72,7 @@ export const regularProducts: Product[] = [
   },
   {
     id: 9,
-    title: "Mini Balizador Solar LED",
+    title: "Roteador wi-fi Intelbras RF 301 K",
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
@@ -80,7 +80,7 @@ export const regularProducts: Product[] = [
   },
   {
     id: 10,
-    title: "Mini Balizador Solar LED",
+    title: "Controle remoto Intelbras XAC 2000",
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
