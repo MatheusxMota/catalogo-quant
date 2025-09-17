@@ -11,7 +11,8 @@ interface ProductCardProps {
   title: string;
   price: number;
   oldPrice?: string;
-  image: string;
+  // A propriedade 'image' agora é 'images', um array de strings.
+  images: string[];
   discount?: string;
   onAddToCart: (product: Product) => void;
 }
@@ -21,7 +22,8 @@ export default function ProductCard({
   title,
   price,
   oldPrice,
-  image,
+  // A propriedade 'image' foi alterada para 'images'.
+  images,
   discount,
   onAddToCart,
 }: ProductCardProps) {
@@ -40,7 +42,8 @@ export default function ProductCard({
       >
         <div onClick={() => setOpen(true)}>
           <Image
-            src={image}
+            // Use a primeira imagem do array 'images[0]' como a imagem principal.
+            src={images[0]}
             alt={title}
             width={100}
             height={100}
@@ -57,12 +60,10 @@ export default function ProductCard({
             </h3>
             {oldPrice && (
               <p className="text-sm text-gray-400 line-through">
-                {/* Converte oldPrice para número e formata, se existir */}
                 {formatter.format(Number(oldPrice))}
               </p>
             )}
             <p className="text-lg font-bold text-green-700">
-              {/* Formata o preço principal */}
               {formatter.format(price)}
             </p>
           </div>
@@ -74,7 +75,8 @@ export default function ProductCard({
               id,
               title,
               price,
-              image,
+              // O objeto do carrinho ainda espera 'image', use 'images[0]'.
+              images
             })
           }
         >
@@ -87,7 +89,8 @@ export default function ProductCard({
           title={title}
           price={price}
           oldPrice={oldPrice}
-          image={image}
+          // Passe o array 'images' para o ProductModal.
+          images={images}
           discount={discount}
           onClose={() => setOpen(false)}
         />

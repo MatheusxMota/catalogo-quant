@@ -1,4 +1,5 @@
 // src/components/ProductCard2.tsx
+
 "use client";
 import Image from "next/image";
 import { useState } from "react";
@@ -10,7 +11,8 @@ interface ProductCardProps2 {
   title: string;
   price: number;
   oldPrice?: string;
-  image: string;
+  // A propriedade 'image' agora é 'images', um array de strings
+  images: string[];
   discount?: string;
   onAddToCart: (product: Product) => void;
 }
@@ -20,7 +22,8 @@ export default function ProductCard2({
   title,
   price,
   oldPrice,
-  image,
+  // A propriedade 'image' foi alterada para 'images'
+  images,
   discount,
   onAddToCart,
 }: ProductCardProps2) {
@@ -37,7 +40,8 @@ export default function ProductCard2({
       <div className="shadow-lg rounded-lg hover:shadow-gray-400 hover:shadow-lg transition cursor-pointer bg-white flex flex-col justify-between">
         <div onClick={() => setOpen(true)}>
           <Image
-            src={image}
+            // Use a primeira imagem do array 'images'
+            src={images[0]}
             alt={title}
             width={100}
             height={100}
@@ -54,12 +58,10 @@ export default function ProductCard2({
             </h3>
             {oldPrice && (
               <p className="text-sm text-gray-400 line-through">
-                {/* Converte oldPrice para número e formata */}
                 {formatter.format(Number(oldPrice))}
               </p>
             )}
             <p className="text-lg font-bold text-green-700">
-              {/* Formata o preço principal */}
               {formatter.format(price)}
             </p>
           </div>
@@ -72,7 +74,8 @@ export default function ProductCard2({
               id,
               title,
               price,
-              image,
+              images: images, // Passe o array completo de imagens
+              discount,
             })
           }
         >
@@ -86,7 +89,8 @@ export default function ProductCard2({
           title={title}
           price={price}
           oldPrice={oldPrice}
-          image={image}
+          // Corrija aqui: Passe o array de imagens.
+          images={images}
           discount={discount}
           onClose={() => setOpen(false)}
         />

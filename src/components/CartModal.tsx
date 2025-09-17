@@ -74,7 +74,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
               >
                 <div className="relative w-20 h-20 flex-shrink-0 rounded-md overflow-hidden">
                   <Image
-                    src={item.image}
+                    src={item.images[0]}
                     alt={item.title}
                     layout="fill"
                     objectFit="cover"

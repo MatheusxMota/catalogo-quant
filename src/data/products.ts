@@ -8,7 +8,8 @@ export const offerProducts: Product[] = [
     title: "Transformador 3000VA Bifásico",
     price: 380.0,
     discount: "-7%",
-    image: "/transformador3000va.jpg",
+    // Corrigido: 'images' agora é um array de strings
+    images: ["/transformador3000va.jpg", "/painel_avant_24ws.webp"],
   },
   {
     id: 2,
@@ -16,7 +17,7 @@ export const offerProducts: Product[] = [
     price: 35.9,
     oldPrice: "45.50",
     discount: "-11%",
-    image: "/disjuntor_bi_40a_sch.webp",
+    images: ["/disjuntor_bi_40a_sch.webp", "/disjuntor_bi_40a_sch-2.webp"],
   },
   {
     id: 3,
@@ -24,7 +25,7 @@ export const offerProducts: Product[] = [
     price: 35.9,
     oldPrice: "45.50",
     discount: "-32%",
-    image: "/painel_avant_24ws.webp",
+    images: ["/painel_avant_24ws.webp", "/painel_avant_24ws-2.webp"],
   },
   {
     id: 4,
@@ -32,44 +33,42 @@ export const offerProducts: Product[] = [
     price: 59.9,
     oldPrice: "71.50",
     discount: "-32%",
-    image: "/quadro_24_emb.webp",
+    images: ["/quadro_24_emb.webp", "/quadro_24_emb-2.webp"],
   },
   {
     id: 5,
     title: "Conjunto 1 Interruptor Simples + 1 Tomada 2P+T 10A Duale Up",
     price: 7.9,
-    oldPrice:" 11.69",
+    oldPrice: "11.69",
     discount: "-32%",
-    image: "/tomadaeinterruptor10aduale.webp",
+    images: ["/tomadaeinterruptor10aduale.webp", "/tomadaeinterruptor10aduale-2.webp"],
   },
   {
     id: 6,
-    title: "Camera Dome Intelbras VHL 1120  D",
+    title: "Camera Dome Intelbras VHL 1120 D",
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/dome.webp",
+    images: ["/dome.webp", "/dome-2.webp"],
   },
 ];
 
 // Produtos
-
 export const regularProducts: Product[] = [
   {
     id: 7,
     title: "Tijolo Comum Vermelho 8,7x4,3x18,6cm",
     price: 1.0,
     discount: "-11%",
-    image: "/tijolo.png",
+    images: ["/transformador3000va.jpg", "/painel_avant_24ws.webp"],
   },
-
   {
     id: 8,
     title: "Churrasqueira Centaurus a Bafo",
     price: 1779.9,
     oldPrice: "2020.21",
     discount: "-11%",
-    image: "/churrasqueira.png",
+    images: ["/churrasqueira.png", "/churrasqueira-2.png"],
   },
   {
     id: 9,
@@ -77,7 +76,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png", "/balizador-2.png"],
   },
   {
     id: 10,
@@ -85,7 +84,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png", "/balizador-2.png"],
   },
   {
     id: 11,
@@ -93,7 +92,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png", "/balizador-2.png"],
   },
   {
     id: 12,
@@ -101,14 +100,14 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png", "/balizador-2.png"],
   },
   {
     id: 13,
     title: "Tijolo Comum Vermelho 8,7x4,3x18,6cm",
     price: 1.0,
     discount: "-11%",
-    image: "/tijolo.png",
+    images: ["/tijolo.png", "/tijolo-2.png"],
   },
   {
     id: 14,
@@ -116,7 +115,7 @@ export const regularProducts: Product[] = [
     price: 1779.9,
     oldPrice: "2020.21",
     discount: "-11%",
-    image: "/churrasqueira.png",
+    images: ["/churrasqueira.png", "/churrasqueira-2.png"],
   },
   {
     id: 15,
@@ -124,7 +123,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png", "/balizador-2.png"],
   },
   {
     id: 16,
@@ -132,7 +131,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png", "/balizador-2.png"],
   },
   {
     id: 17,
@@ -140,7 +139,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png", "/balizador-2.png"],
   },
   {
     id: 18,
@@ -148,8 +147,6 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png", "/balizador-2.png"],
   },
 ];
-
-  // ... adicione todos os seus produtos de Produtos aqui
