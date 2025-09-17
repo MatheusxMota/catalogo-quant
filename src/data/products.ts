@@ -107,7 +107,7 @@ export const regularProducts: Product[] = [
     title: "Roteador W5 1200G Intelbras Dualband AC1200 ",
     price: 1.0,
     discount: "-11%",
-    images: ["/tijolo.png", "/tijolo-2.png"],
+    images: ["/w5.jpg"],
   },
   {
     id: 14,
@@ -115,7 +115,7 @@ export const regularProducts: Product[] = [
     price: 1779.9,
     oldPrice: "2020.21",
     discount: "-11%",
-    images: ["/churrasqueira.png", "/churrasqueira-2.png"],
+    images: ["/proteraioar.webp"],
   },
   {
     id: 15,
@@ -123,7 +123,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    images: ["/balizador.png", "/balizador-2.png"],
+    images: ["/fusivel.webp"],
   },
   {
     id: 16,
@@ -131,7 +131,7 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    images: ["/balizador.png", "/balizador-2.png"],
+    images: ["/steck40a.jpg"],
   },
   {
     id: 17,
@@ -139,14 +139,14 @@ export const regularProducts: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    images: ["/balizador.png", "/balizador-2.png"],
+    images: ["/15led.webp"],
   },
   {
     id: 18,
-    title: "Zenit ",
+    title: "Zennith Megatons ",
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    images: ["/balizador.png", "/balizador-2.png"],
+    images: ["/zenit.jpg"],
   },
 ];
