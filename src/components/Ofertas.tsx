@@ -41,7 +41,7 @@ export const products: Product[] = [
     title: "Tijolo Comum Vermelho 8,7x4,3x18,6cm",
     price: 1.0,
     discount: "-11%",
-    image: "/tijolo.png",
+    images: ["/tijolo.png"]
   },
   {
     id: 2,
@@ -49,7 +49,7 @@ export const products: Product[] = [
     price: 1779.9,
     oldPrice: "2020.21",
     discount: "-11%",
-    image: "/churrasqueira.png",
+    images: ["/churrasqueira.png"]
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ export const products: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png"]
   },
   {
     id: 4,
@@ -65,7 +65,7 @@ export const products: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png",]
   },
   {
     id: 5,
@@ -73,7 +73,7 @@ export const products: Product[] = [
     price: 7.9,
     oldPrice:" 11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png"]
   },
   {
     id: 6,
@@ -81,6 +81,6 @@ export const products: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png"]
   },
 ];
