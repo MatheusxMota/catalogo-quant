@@ -41,7 +41,7 @@ export const products2: Product[] = [
     title: "Tijolo Comum Vermelho 8,7x4,3x18,6cm",
     price: 1.0,
     discount: "-11%",
-    image: "/tijolo.png",
+    images: ["/tijolo.png"],
   },
   {
     id: 8,
@@ -49,7 +49,7 @@ export const products2: Product[] = [
     price: 1779.9,
     oldPrice: "2020.21",
     discount: "-11%",
-    image: "/churrasqueira.png",
+    images: ["/churrasqueira.png"],
   },
   {
     id: 9,
@@ -57,7 +57,7 @@ export const products2: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png"],
   },
   {
     id: 10,
@@ -65,7 +65,7 @@ export const products2: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png"],
   },
   {
     id: 11,
@@ -73,7 +73,7 @@ export const products2: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png"],
   },
   {
     id: 12,
@@ -81,14 +81,14 @@ export const products2: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png"],
   },
   {
     id: 13,
     title: "Tijolo Comum Vermelho 8,7x4,3x18,6cm",
     price: 1.0,
     discount: "-11%",
-    image: "/tijolo.png",
+    images: ["/tijolo.png"],
   },
   {
     id: 14,
@@ -96,7 +96,7 @@ export const products2: Product[] = [
     price: 1779.9,
     oldPrice: "2020.21",
     discount: "-11%",
-    image: "/churrasqueira.png",
+    images: ["/churrasqueira.png"],
   },
   {
     id: 15,
@@ -104,7 +104,7 @@ export const products2: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png"],
   },
   {
     id: 16,
@@ -112,7 +112,7 @@ export const products2: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png"],
   },
   {
     id: 17,
@@ -120,7 +120,7 @@ export const products2: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png"],
   },
   {
     id: 18,
@@ -128,6 +128,6 @@ export const products2: Product[] = [
     price: 7.9,
     oldPrice: "11.69",
     discount: "-32%",
-    image: "/balizador.png",
+    images: ["/balizador.png"],
   },
 ];
