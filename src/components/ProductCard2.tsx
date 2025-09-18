@@ -43,7 +43,7 @@ export default function ProductCard2({
             // Use a primeira imagem do array 'images'
             src={images[0]}
             alt={title}
-            width={100}
+            width={200}
             height={100}
             className="mx-auto p-4"
           />
