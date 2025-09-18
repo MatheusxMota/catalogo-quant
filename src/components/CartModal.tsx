@@ -18,6 +18,8 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
   const [selectedPayment, setSelectedPayment] = useState<
     "pix" | "credit" | "debit" | null
   >(null);
+  // Adicione um estado para o endereço do cliente
+  const [address, setAddress] = useState<string>("");
 
   if (!isOpen) return null;
 
@@ -36,6 +38,9 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
         : "Cartão de Débito"
       : "Não informada";
 
+    // Adicione a informação do endereço à mensagem
+    const addressText = address.trim() !== "" ? `Endereço de Entrega: ${address}` : "Endereço: Não informado";
+
     const message = `Olá, gostaria de finalizar meu pedido!%0A%0A*Itens do Pedido:*%0A${cartItems
       .map(
         (item) =>
@@ -48,7 +53,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
       .replace(
         ".",
         ","
-      )}%0A*Forma de Pagamento:* ${paymentText}%0A%0A`;
+      )}%0A*Forma de Pagamento:* ${paymentText}%0A%0A*${addressText}*`;
 
     return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
   };
@@ -104,7 +109,6 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
 
         <div className="mt-6 pt-4 border-t border-gray-300">
           <h3 className="text-lg font-bold text-blue-ocean mb-4">Opções de Pagamento</h3>
-
           <div className="flex flex-col md:flex-row gap-2 mb-4 ">
             <button
               onClick={() => setSelectedPayment("pix")}
@@ -138,7 +142,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
             </button>
           </div>
 
-          <div className="bg-gray-50 rounded-md p-4 min-h-[100px] flex items-center  justify-center">
+          <div className="bg-gray-50 rounded-md p-4 min-h-[100px] flex items-center justify-center">
             {selectedPayment === "pix" && (
               <p className="text-sm text-primary-grey text-center">
                 Ao finalizar a compra, um atendente entrará em contato para fornecer os dados do Pix
@@ -160,6 +164,21 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
               </p>
             )}
           </div>
+        </div>
+
+        {/* Adicione o campo de endereço aqui */}
+        <div className="mt-6">
+          <label htmlFor="address" className="block text-sm font-bold text-blue-ocean mb-2">
+            Endereço para Entrega
+          </label>
+          <textarea
+            id="address"
+            rows={2}
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            placeholder="Rua, número, bairro, cidade, CEP."
+            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
         </div>
 
         <div className="flex justify-center">
